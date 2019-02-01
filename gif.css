@@ -2,6 +2,8 @@
 .jumbotron { 
   background-color: #e6507d; /* Orange */
   color: #ffffff;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .button {
@@ -32,9 +34,19 @@ p {
 .container-fluid {
     padding: 30px 20px;
   }
+
 .row {
     padding: 5px 5px
   }
-  .w3-btn {
-      background-color: rgb(14, 119, 133);
+
+.w3-btn {
+    background-color: rgb(14, 119, 133);
+  }
+
+  #gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+
   }
