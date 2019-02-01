@@ -1,24 +1,17 @@
 
 
 $(document).ready(function() {
-    // register our function as the "callback" to be triggered by the form's submission event
-    $("#form-gif-request").submit(fetchAndDisplayGif); // in other words, when the form is submitted, fetchAndDisplayGif() will be executed
+   
+    $("#form-gif-request").submit(fetchAndDisplayGif); 
 });
 
-
-/**
- * sends an asynchronous request to Giphy.com aksing for a random GIF using the 
- * user's search term (along with "jackson 5")
- * 
- * upon receiving a response from Giphy, updates the DOM to display the new GIF
- */
 function fetchAndDisplayGif(event) {
     var $body = $('body');
  
     event.preventDefault();
     
     
-    var searchQuery = $('#tag').val(); 
+    var searchQuery = $('#tag').val();
     
    
     var params = { 
@@ -38,12 +31,12 @@ function fetchAndDisplayGif(event) {
                 $("#loading").text('Just one second while we load your gif!');
                                            
                 $("#gif").attr("src", response.data.image_url);
+                $("#loading").hide();
             } 
             else {$("#nogif").text('No Gif for you!');
             }
             
             // TODO
-            // 1. set the source attribute of our image to the image_url of the GIF
             // 2. hide the feedback message and display the image
         },
         error: function() {
